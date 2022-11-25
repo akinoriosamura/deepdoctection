@@ -133,7 +133,7 @@ def get_train_dataflow(
     :return: A dataflow
     """
 
-    set_mp_spawn()
+    # set_mp_spawn()
     cfg = config
     df = dataset.dataflow.build(**build_train_kwargs)
     df = MapData(df, image_to_tp_frcnn_training(add_mask=False))  # pylint: disable=E1120
